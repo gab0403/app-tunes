@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Loading from './Loading';
 import { createUser } from '../services/userAPI';
+import '../styles/Login.css';
+import logo from '../image/logo-trybetunes.png';
 
 class Login extends React.Component {
   constructor(props) {
@@ -47,27 +49,38 @@ class Login extends React.Component {
       loading,
     } = this.state;
     return (
-      <div data-testid="page-login">
-        <label htmlFor="name">
-          Nome
-          <input
-            data-testid="login-name-input"
-            type="text"
-            id="name"
-            name="name"
-            value={ name }
-            onChange={ this.onInputChange }
-          />
-        </label>
-        <button
-          data-testid="login-submit-button"
-          type="submit"
-          disabled={ isLoginButtonDisabled }
-          onClick={ this.ableLoginButton }
+      <div>
+        <div className="container-logo">
+          <img className="logo" src={ logo } alt="logo" />
+        </div>
+        <div
+          data-testid="page-login"
+          className="container-login"
         >
-          Entrar
-        </button>
-        { loading && <Loading /> }
+          <label htmlFor="name">
+            <input
+              placeholder="Nome"
+              className="nome_login"
+              data-testid="login-name-input"
+              type="text"
+              id="name"
+              name="name"
+              value={ name }
+              onChange={ this.onInputChange }
+            />
+          </label>
+          <button
+            className="button_login"
+            data-testid="login-submit-button"
+            type="submit"
+            disabled={ isLoginButtonDisabled }
+            onClick={ this.ableLoginButton }
+          >
+            Entrar
+          </button>
+          <br />
+          { loading && <Loading /> }
+        </div>
       </div>
     );
   }

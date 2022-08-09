@@ -1,0 +1,81 @@
+.img-album {
+  border-radius: 6px;
+  height: 290px;
+  left: 179px;
+  margin-top: 302px;
+  position: absolute;
+  width: 290px;
+}
+
+.album-name {
+  color: #4a148c;
+  font-family: 'Epilogue';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  height: 50px;
+  left: 179px;
+  line-height: 37px;
+  position: absolute;
+  top: 580px;
+  width: 330px;
+}
+
+.name-artista {
+  color: black;
+  font-family: "Epilogue";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  height: 36px;
+  left: 184px;
+  line-height: 25px;
+  position: absolute;
+  top: 740px;
+  width: 255px;
+}
+
+.music-container {
+  margin-top: 714px;
+}
+
+.container-album-music {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 450px;
+}
+
+.music {
+  align-items: flex-start;
+  background-color: #e7c6ff;
+  border-radius: 6px;
+  box-shadow: 4px 4px 6px gray;
+  display: flex;
+  flex-wrap: wrap;
+  height: 60px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  width: 900px;
+}
+
+.title-music {
+  color: #4a148c;
+  font-family: "Epilogue";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 37px;
+}
+
+.favorita {
+  height: 40px;
+  margin-top: 10px;
+  width: 40px;
+}
+
+.container-audio {
+  margin-left: 200px;
+}

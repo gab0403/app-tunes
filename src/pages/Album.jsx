@@ -4,6 +4,7 @@ import Header from '../Header';
 import Loading from './Loading';
 import MusicCard from '../MusicCard';
 import getMusics from '../services/musicsAPI';
+import '../styles/Album.css';
 
 class Album extends React.Component {
   constructor(props) {
@@ -43,24 +44,29 @@ class Album extends React.Component {
   render() {
     const { album, loading, nameArtist, nameAlbum, imgAlbum } = this.state;
     return (
-      <div data-testid="page-album">
-        <Header />
-        <p data-testid="artist-name">
-          Artista:
-          { nameArtist }
-        </p>
-        <p data-testid="album-name">
-          Album:
-          { nameAlbum }
-        </p>
-        <img src={ imgAlbum } alt="Name" />
-        <div>
-          Musicas:
+      <div className="container-album-music">
+        <div data-testid="page-album" className="container-music">
+          <Header />
+          <img src={ imgAlbum } alt="Name" className="img-album" />
+          <p data-testid="artist-name" className="name-artista">
+            Artista:
+            {' '}
+            { nameArtist }
+          </p>
+          <p data-testid="album-name" className="album-name">
+            Album:
+            {' '}
+            { nameAlbum }
+          </p>
+        </div>
+        <div className="container-audio">
+          <p className="title-music">Musicas</p>
           {loading ? <Loading />
             : (
               album.map((element, index) => (
                 index !== 0 && (
                   <MusicCard
+                    className="music-container"
                     key={ element.trackId }
                     trackId={ element.trackId }
                     previewUrl={ element.previewUrl }
